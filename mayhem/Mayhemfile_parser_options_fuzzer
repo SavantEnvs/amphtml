@@ -1,0 +1,11 @@
+project: savantenvs/amphtml
+target: parser_options_fuzzer
+
+cmds:
+  - cmd: /mayhem/parser_options_fuzzer
+    libfuzzer: true
+    timeout: 5
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/parser_options_fuzzer/testsuite

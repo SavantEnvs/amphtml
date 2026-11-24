@@ -1,0 +1,11 @@
+project: savantenvs/amphtml
+target: grammar_validators_fuzzer
+
+cmds:
+  - cmd: /mayhem/grammar_validators_fuzzer
+    libfuzzer: true
+    timeout: 5
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/grammar_validators_fuzzer/testsuite

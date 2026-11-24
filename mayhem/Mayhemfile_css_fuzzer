@@ -1,0 +1,11 @@
+project: savantenvs/amphtml
+target: css_fuzzer
+
+cmds:
+  - cmd: /mayhem/css_fuzzer
+    libfuzzer: true
+    timeout: 5
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/css_fuzzer/testsuite
